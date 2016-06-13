@@ -138,7 +138,7 @@ activity2$weekdaykind <- ifelse(weekdays(activity2$date) %in% c('Saturday','Sund
 Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). The plot should look something like the following, which was created using simulated data:
 
 
-```{r, fig.width=9, fig.height=6}
+```{r, echo=TRUE, fig.width=9, fig.height=6}
 activity_pattern_summary <- aggregate(list(steps=activity2$steps),
                                       list(interval = activity2$interval, weekdaykind = activity2$weekdaykind),
                                       mean)
